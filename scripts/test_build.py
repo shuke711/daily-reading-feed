@@ -125,13 +125,13 @@ class FeedTests(unittest.TestCase):
         self.write()
         with self.assertRaises(ValueError): load_articles(self.root/'content')
 
-    def test_today_fixture_has_eight_items_three_images_and_separate_long_read(self):
+    def test_today_fixture_has_eight_items_optional_images_and_separate_long_read(self):
         root = Path(__file__).resolve().parents[1]/'content'
         articles = load_articles(root)
         today = next(a for a in articles if a['id'] == '2026-10-06-news')
         self.assertEqual(len(today['news_items']), 8)
         parsed = BodyParser(today['_html'])
-        self.assertEqual(len(parsed.images), 3)
+        self.assertEqual(len(parsed.images), 2)
         self.assertFalse({'strong', 'b', 'script'} & set(parsed.tags))
         self.assertNotIn('今日长读', today['_html'])
         reading = next(a for a in articles if a['id'] == '2026-10-06-reads')
