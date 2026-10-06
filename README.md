@@ -18,7 +18,48 @@ Reeder 中选择添加订阅，粘贴 RSS 地址并确认；只订阅合并 Feed
 
 ## 内容格式
 
-新闻存入 `content/news/YYYY-MM-DD.json`，长文存入 `content/reads/YYYY-MM-DD.json`。每个 JSON 是一篇文章，字段参照测试文章。`id` 永久不变，日期须包含时区。正文 `content_text` 是纯文本，用空行分段，可包含完整来源网址。全文直接嵌入 Feed，所有历史文章保留。测试文章明确标注，不冒充真实日报。
+新闻存入 `content/news/YYYY-MM-DD.json`，独立长读可以共用目录，存入 `content/news/YYYY-MM-DD-reads.json`，也兼容原有 `content/reads/` 目录。Feed 按 `category` 分类，不按所在目录分类。每个 JSON 是一篇文章，字段参照测试文章。`id` 永久不变，日期须包含时区。正文 `content_text` 是纯文本，用空行分段，可包含完整来源网址。全文直接嵌入 Feed，所有历史文章保留。测试文章明确标注，不冒充真实日报。
+
+### 新闻版式与图片
+
+新简报使用 `news_items` 结构生成 HTML，而不是从纯文本猜标题或把英文词加粗。生成器输出编号 `h2` 标题、正文段落、`h3` 关注理由和可点击的来源；新闻之间用分隔线。旧文章没有 `news_items` 时继续按原纯文本格式构建，无需迁移或删除。
+
+```json
+{
+  "intro": ["今天的导读。"],
+  "news_items": [
+    {
+      "title": "新闻标题",
+      "body": ["发生了什么。", "必要背景。"],
+      "why_it_matters": "为什么值得关注。",
+      "sources": [{"name": "媒体名称", "url": "https://example.org/news"}],
+      "image": {
+        "url": "https://example.org/photo.jpg",
+        "alt": "图片的具体内容",
+        "caption": "图片说明",
+        "credit": "摄影师 / 媒体",
+        "source_url": "https://example.org/news"
+      }
+    }
+  ],
+  "afterword": ["可选编后说明。"],
+  "sections": [
+    {"title": "今日长读", "paragraphs": ["长读正文。"],
+     "sources": [{"name": "阅读原文", "url": "https://example.org/read"}]}
+  ],
+  "date_modified": "2026-10-06T17:00:00+08:00"
+}
+```
+
+以上字段与原有必填字段一起使用。`image` 完全可选，无图时省略整个字段；图片必须是公开、可直接加载的绝对 HTTPS 地址，并填写替代文本、说明和署名。不使用网站页面地址作为图片地址。8 条新闻通常选择 2–4 张有信息价值的原文图片；没有可靠配图时允许无图，不凑图。生成器不抓图、不根据来源网站猜图，也不强制每条配图。
+
+结构化字段是正文的依据，构建时同时生成一致的 `content_text` 和 `content_html`。源文件的 `content_text` 保留纯文本备用，发布时应同步更新。所有文本均转义，不能直接插入 HTML；不输出 `strong`/`b` 标签，不对英文词逐个添加视觉强调。标题的层级由阅读器显示。
+
+### 阅读器兼容与更新
+
+RSS 2.0 的 `content:encoded` 和 `description` 都包含完整 HTML，兼顾只读取其中一个字段的阅读器；JSON Feed 1.1 提供 `content_html`、纯文本和摘要。图片使用普通 `img`，不依赖脚本、懒加载或站点 CSS，宽度自适应。Feed URL、文章 URL、GUID 和 JSON Feed ID 保持不变。
+
+编辑当天文章时保留 `date_published`，更新带时区的 `date_modified`。RSS 提供 `atom:updated` 和更新后的 `lastBuildDate`，JSON Feed 提供 `date_modified`。客户端缓存更新策略不同，这些字段不能保证 Reeder 自动替换已经缓存的旧正文。验收应分别确认 Actions 成功、公开 Feed 的实际正文，以及 Reeder 刷新后的显示；只有真实客户端显示确认后才称为 Reeder 实机验收通过。
 
 ## 云端发布
 
