@@ -25,8 +25,8 @@ def load_articles(root):
         if a['id'] in ids:
             raise ValueError(f'{path}: duplicate id')
         ids.add(a['id'])
-        if a['category'] not in ('news', 'reads') or path.parent.name != a['category']:
-            raise ValueError(f'{path}: category must match directory')
+        if a['category'] not in ('news', 'reads'):
+            raise ValueError(f'{path}: category must be news or reads')
         a['_date'] = datetime.fromisoformat(a['date_published'].replace('Z', '+00:00'))
         if a['_date'].tzinfo is None:
             raise ValueError(f'{path}: date must include timezone')
