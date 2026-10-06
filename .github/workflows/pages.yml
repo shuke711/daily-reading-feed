@@ -1,0 +1,38 @@
+name: Build and publish reading feeds
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate generator
+        run: python -m unittest discover -s scripts -p 'test_*.py'
+      - uses: actions/configure-pages@v5
+        id: pages
+      - name: Build full-text feeds
+        env:
+          BASE_URL: ${{ steps.pages.outputs.base_url }}
+        run: python scripts/build.py --base-url "$BASE_URL"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - uses: actions/deploy-pages@v4
+        id: deploy
