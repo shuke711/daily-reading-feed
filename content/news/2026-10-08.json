@@ -1,0 +1,117 @@
+{
+  "id": "2026-10-08-news",
+  "title": "每日重点新闻简报｜2026年10月8日",
+  "date_published": "2026-10-08T08:37:54+08:00",
+  "category": "news",
+  "summary": "GPT-6 Intelligent UI、Claude Haiku 5.5、AI 数学手稿、Apple 智能家居、Claude 办公集成、红海局势、诺贝尔化学奖、印度加息。",
+  "content_text": "今天精选 8 条，AI 和消费科技优先，其他领域只留重大变化。\n\n1. GPT-6 扩大推送，ChatGPT 新增交互界面\n\nOpenAI 10 月 7 日把 GPT-6 带入更多 ChatGPT 账号，Intelligent UI 可按问题生成图表、按钮、计算器等交互内容。付费计划开始使用 GPT-6 Sol，Free/Go 从 8 日开始获得 GPT-6 Luna；Work 和 Codex 此次不变。\n\n为什么值得关注：回答形式从纯文字走向可直接操作的界面。\n\n来源：OpenAI https://openai.com/index/gpt-6-for-everyone/\n\n2. Claude Haiku 5.5 发布，API 成本下降\n\nAnthropic 10 月 7 日推出小模型 Haiku 5.5，短上下文每百万输入/输出 token 价格为 0.10/0.50 美元。官方称典型任务成本较上一代平均降低约 75%，并下调 Sonnet 5.5 的缓存读取价格。\n\n为什么值得关注：高频 Agent 调用更看重速度和成本；官方跑分仍待实际验证。\n\n来源：Anthropic https://www.anthropic.com/claude-haiku-5-5\n\n3. OpenAI 公布 722 篇 AI 数学研究手稿\n\nOpenAI 10 月 6 日公布来自内部未发布模型的 722 篇手稿，分为 372 组相关结果，部分附 Lean 形式化证明。\n\n为什么值得关注：这些成果并非全部获得独立验证，手稿数量也不等于已证明的定理数量。\n\n来源：OpenAI https://openai.com/index/sharing-ai-progress-in-mathematics/\n\n4. Apple 十月产品计划与智能家居合作曝光\n\niPhone Duo 已确认 10 月 16 日预订、23 日上市。Bloomberg 10 月 7 日报道 Apple 与 LG 合作开发智能门锁、门铃、温控器等设备，传闻家居中控屏或于 13 日亮相。\n\n为什么值得关注：折叠 iPhone 的时间表已获官方确认，LG 智能家居计划仍是报道与传闻。\n\n来源：Bloomberg https://www.japantimes.co.jp/business/2026/10/07/apple-smart-home-lg-electronics/\n\n5. Claude 进入 Google Docs、Sheets 和 Slides\n\nAnthropic 10 月 6 日开放 Google Workspace 插件公测，付费用户可在文件侧边栏调用 Claude 修改文档、表格和演示文稿，也可从 Claude 对话里编辑 Google 文件。\n\n为什么值得关注：AI 助手开始直接编辑生产力软件中的真实文件；企业部署受管理员权限约束。\n\n来源：Claude https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides\n\n6. 沙特机场遇袭，红海周边冲突升级\n\n10 月 7 日胡塞武装宣称袭击沙特阿卜哈与利雅得机场，报道显示共造成 3 人死亡、多人受伤。也门曼德海峡附近的交战仍在持续。\n\n为什么值得关注：事态已影响民航安全，并可能推高红海航运成本；局部战况尚待核实。\n\n来源：Reuters https://www.reuters.com/world/middle-east/houthis-launch-missiles-yemens-aden-airport-fighting-intensifies-2026-10-07/\n\n7. 2026 年诺贝尔化学奖公布\n\n法国化学家 Henri B. Kagan 和日本化学家 Kensō Soai 因不对称有机合成中的非线性效应与自催化研究获奖，帮助人类控制分子互为镜像的两种形态。\n\n为什么值得关注：对药物合成至关重要，也为生命的分子手性提供解释线索。\n\n来源：美国化学会 https://www.acs.org/pressroom/newsreleases/2026/october/acs-president-comments-on-award-of-2026-nobel-prize-in-chemistry.html\n\n8. 印度近四年来首次加息\n\n印度央行 10 月 7 日把政策利率上调 0.25 个百分点至 5.5%，并转向谨慎收紧，以应对能源和食品价格上涨带来的通胀压力。\n\n为什么值得关注：主要新兴经济体的货币政策开始转向控制物价，贷款成本可能上升。\n\n来源：Reuters https://www.reuters.com/world/india/india-raises-policy-rate-by-25-bps-first-hike-nearly-four-years-2026-10-07/",
+  "intro": [
+    "今天精选 8 条，AI 和消费科技优先，其他领域只留重大变化。"
+  ],
+  "news_items": [
+    {
+      "title": "GPT-6 扩大推送，ChatGPT 新增交互界面",
+      "body": [
+        "OpenAI 10 月 7 日把 GPT-6 带入更多 ChatGPT 账号，Intelligent UI 可按问题生成图表、按钮、计算器等交互内容。付费计划开始使用 GPT-6 Sol，Free/Go 从 8 日开始获得 GPT-6 Luna；Work 和 Codex 此次不变。"
+      ],
+      "why_it_matters": "回答形式从纯文字走向可直接操作的界面。",
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/gpt-6-for-everyone/"
+        }
+      ]
+    },
+    {
+      "title": "Claude Haiku 5.5 发布，API 成本下降",
+      "body": [
+        "Anthropic 10 月 7 日推出小模型 Haiku 5.5，短上下文每百万输入/输出 token 价格为 0.10/0.50 美元。官方称典型任务成本较上一代平均降低约 75%，并下调 Sonnet 5.5 的缓存读取价格。"
+      ],
+      "why_it_matters": "高频 Agent 调用更看重速度和成本；官方跑分仍待实际验证。",
+      "sources": [
+        {
+          "name": "Anthropic",
+          "url": "https://www.anthropic.com/claude-haiku-5-5"
+        }
+      ]
+    },
+    {
+      "title": "OpenAI 公布 722 篇 AI 数学研究手稿",
+      "body": [
+        "OpenAI 10 月 6 日公布来自内部未发布模型的 722 篇手稿，分为 372 组相关结果，部分附 Lean 形式化证明。"
+      ],
+      "why_it_matters": "这些成果并非全部获得独立验证，手稿数量也不等于已证明的定理数量。",
+      "sources": [
+        {
+          "name": "OpenAI",
+          "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/"
+        }
+      ]
+    },
+    {
+      "title": "Apple 十月产品计划与智能家居合作曝光",
+      "body": [
+        "iPhone Duo 已确认 10 月 16 日预订、23 日上市。Bloomberg 10 月 7 日报道 Apple 与 LG 合作开发智能门锁、门铃、温控器等设备，传闻家居中控屏或于 13 日亮相。"
+      ],
+      "why_it_matters": "折叠 iPhone 的时间表已获官方确认，LG 智能家居计划仍是报道与传闻。",
+      "sources": [
+        {
+          "name": "Bloomberg",
+          "url": "https://www.japantimes.co.jp/business/2026/10/07/apple-smart-home-lg-electronics/"
+        }
+      ]
+    },
+    {
+      "title": "Claude 进入 Google Docs、Sheets 和 Slides",
+      "body": [
+        "Anthropic 10 月 6 日开放 Google Workspace 插件公测，付费用户可在文件侧边栏调用 Claude 修改文档、表格和演示文稿，也可从 Claude 对话里编辑 Google 文件。"
+      ],
+      "why_it_matters": "AI 助手开始直接编辑生产力软件中的真实文件；企业部署受管理员权限约束。",
+      "sources": [
+        {
+          "name": "Claude",
+          "url": "https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides"
+        }
+      ]
+    },
+    {
+      "title": "沙特机场遇袭，红海周边冲突升级",
+      "body": [
+        "10 月 7 日胡塞武装宣称袭击沙特阿卜哈与利雅得机场，报道显示共造成 3 人死亡、多人受伤。也门曼德海峡附近的交战仍在持续。"
+      ],
+      "why_it_matters": "事态已影响民航安全，并可能推高红海航运成本；局部战况尚待核实。",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/middle-east/houthis-launch-missiles-yemens-aden-airport-fighting-intensifies-2026-10-07/"
+        }
+      ]
+    },
+    {
+      "title": "2026 年诺贝尔化学奖公布",
+      "body": [
+        "法国化学家 Henri B. Kagan 和日本化学家 Kensō Soai 因不对称有机合成中的非线性效应与自催化研究获奖，帮助人类控制分子互为镜像的两种形态。"
+      ],
+      "why_it_matters": "对药物合成至关重要，也为生命的分子手性提供解释线索。",
+      "sources": [
+        {
+          "name": "美国化学会",
+          "url": "https://www.acs.org/pressroom/newsreleases/2026/october/acs-president-comments-on-award-of-2026-nobel-prize-in-chemistry.html"
+        }
+      ]
+    },
+    {
+      "title": "印度近四年来首次加息",
+      "body": [
+        "印度央行 10 月 7 日把政策利率上调 0.25 个百分点至 5.5%，并转向谨慎收紧，以应对能源和食品价格上涨带来的通胀压力。"
+      ],
+      "why_it_matters": "主要新兴经济体的货币政策开始转向控制物价，贷款成本可能上升。",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.reuters.com/world/india/india-raises-policy-rate-by-25-bps-first-hike-nearly-four-years-2026-10-07/"
+        }
+      ]
+    }
+  ]
+}
